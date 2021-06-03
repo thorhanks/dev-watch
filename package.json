@@ -10,6 +10,9 @@
         "test:update-snapshots": "npm run test:unit -- -u",
         "lint": "vue-cli-service lint"
     },
+    "gitHooks": {
+        "pre-commit": "git-format-staged -f 'prettier --stdin --stdin-filepath \"{}\"' '*.vue' '*.js' '*.json' '*.css' '*.html'"
+    },
     "dependencies": {
         "vue": "^2.6.11",
         "vue-i18n": "^8.24.4",
@@ -27,6 +30,7 @@
         "eslint-plugin-prettier": "^3.3.1",
         "eslint-plugin-vue": "^6.2.2",
         "faker": "^5.5.3",
+        "git-format-staged": "^2.1.1",
         "miragejs": "^0.1.41",
         "postcss": "^7.0.35",
         "prettier": "^2.2.1",
