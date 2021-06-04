@@ -1,7 +1,7 @@
 <template>
     <button
-class="button is-primary mt-10"
-v-for="v in []"
+ class="button is-primary mt-10"
+ v-for="v in []"
  :key="v.key"
         v-if="true"
         @click="onClick"
