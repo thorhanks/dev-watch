@@ -1,5 +1,10 @@
 <template>
-    <button class="button is-primary mt-10" @click="onClick">
+    <button
+        class="button is-primary mt-10"
+        v-for="v in []"
+        :key="v.key"
+        @click="onClick"
+    >
         <!-- @slot default inner button content -->
         <slot></slot>
     </button>
@@ -9,7 +14,7 @@
 export default {
     name: "my-button",
     methods: {
-        onClick() {
+        onClick(value) {
             /**
              * Click event
              *

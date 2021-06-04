@@ -10,10 +10,12 @@
         "test:watch": "vue-cli-service test:unit --watch",
         "test:update-snapshots": "npm run test:unit -- -u",
         "storybook:build": "vue-cli-service storybook:build -c .storybook",
-        "storybook:serve": "vue-cli-service storybook:serve -p 4242 -c .storybook"
+        "storybook:serve": "vue-cli-service storybook:serve -p 4242 -c .storybook",
+        "pre-commit:prettier": "git-format-staged -f 'prettier --stdin --stdin-filepath \"{}\"' '*.vue' '*.js' '*.json' '*.css' '*.html'",
+        "pre-commit:eslint": "git-format-staged -f 'eslint --stdin --stdin-filepath \"{}\"' '*.vue' '*.js' '*.json' '*.css' '*.html'"
     },
     "gitHooks": {
-        "pre-commit": "git-format-staged -f 'prettier --stdin --stdin-filepath \"{}\"' '*.vue' '*.js' '*.json' '*.css' '*.html'"
+        "pre-commit": "npm run pre-commit:prettier && npm run pre-commit:eslint"
     },
     "dependencies": {
         "vue": "^2.6.11",
