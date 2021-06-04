@@ -3,6 +3,7 @@
         class="button is-primary mt-10"
         v-for="v in []"
         :key="v.key"
+        v-if="true"
         @click="onClick"
     >
         <!-- @slot default inner button content -->
