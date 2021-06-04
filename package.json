@@ -5,10 +5,12 @@
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build --modern ./src/main.js",
-        "test:unit": "vue-cli-service test:unit",
-        "test:unit:watch": "vue-cli-service test:unit --watch",
+        "lint": "vue-cli-service lint",
+        "test": "vue-cli-service test:unit",
+        "test:watch": "vue-cli-service test:unit --watch",
         "test:update-snapshots": "npm run test:unit -- -u",
-        "lint": "vue-cli-service lint"
+        "storybook:build": "vue-cli-service storybook:build -c .storybook",
+        "storybook:serve": "vue-cli-service storybook:serve -p 4242 -c .storybook"
     },
     "gitHooks": {
         "pre-commit": "git-format-staged -f 'prettier --stdin --stdin-filepath \"{}\"' '*.vue' '*.js' '*.json' '*.css' '*.html'"
@@ -19,6 +21,9 @@
         "vuex": "^3.4.0"
     },
     "devDependencies": {
+        "@babel/core": "^7.4.5",
+        "@storybook/addon-essentials": "^6.0.26",
+        "@storybook/vue": "^6.0.26",
         "@vue/cli-plugin-eslint": "^4.5.0",
         "@vue/cli-plugin-unit-jest": "^4.5.0",
         "@vue/cli-plugin-vuex": "^4.5.0",
@@ -26,15 +31,17 @@
         "@vue/eslint-config-prettier": "^6.0.0",
         "@vue/test-utils": "^1.0.3",
         "autoprefixer": "^9.8.6",
+        "babel-loader": "^8.0.4",
         "eslint": "^6.7.2",
         "eslint-plugin-prettier": "^3.3.1",
         "eslint-plugin-vue": "^6.2.2",
         "faker": "^5.5.3",
         "git-format-staged": "^2.1.1",
         "miragejs": "^0.1.41",
-        "postcss": "^7.0.35",
+        "postcss": "^8.1.0",
         "prettier": "^2.2.1",
         "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2",
+        "vue-cli-plugin-storybook": "^2.0.0",
         "vue-template-compiler": "^2.6.11",
         "wretch": "^1.7.4"
     }

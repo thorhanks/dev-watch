@@ -1,8 +1,8 @@
 import "./assets/reset.css";
-import "tailwindcss/tailwind.css";
+import "./main.css";
 import Vue from "vue";
 import i18n from "./lang";
-import App from "./App.vue";
+import Main from "./Main.vue";
 import store from "./store";
 import { makeMockServer } from "@/mock-server/server";
 
@@ -21,5 +21,5 @@ Vue.config.errorHandler = (err, vm, info) => {
 new Vue({
     store,
     i18n,
-    render: (h) => h(App),
+    render: (h) => h(Main),
 }).$mount("#app");

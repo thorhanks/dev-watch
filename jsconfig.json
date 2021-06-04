@@ -5,5 +5,5 @@
             "@/*": ["src/*"]
         }
     },
-    "include": ["./node_modules/cypress", "tests/**/*.js"]
+    "include": ["./node_modules/cypress", "src/**/*.js"]
 }
