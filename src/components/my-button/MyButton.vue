@@ -1,6 +1,7 @@
 <template>
     <button class="button is-primary mt-10" @click="onClick">
         <!-- @slot default inner button content -->
+        hello world
         <slot></slot>
     </button>
 </template>
