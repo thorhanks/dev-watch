@@ -16,7 +16,7 @@ jobs:
                   fetch-depth: 0
 
             - name: Format
-              uses: creyD/prettier_action@v3
+              uses: creyD/prettier_action@v3.3
               with:
                   prettier_options: --write --config ./.prettierrc ./src/**/*.{vue,js,json,css,html,mdx}
                   only_changed: True
