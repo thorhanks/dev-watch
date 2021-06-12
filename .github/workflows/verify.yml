@@ -1,0 +1,62 @@
+name: Verify
+on:
+    pull_request:
+        branches: [main]
+    workflow_dispatch:
+
+jobs:
+    format:
+        runs-on: ubuntu-latest
+        name: Format
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+              with:
+                  ref: ${{ github.head_ref }}
+                  fetch-depth: 0
+
+            - name: Format
+              uses: creyD/prettier_action@v3
+              with:
+                  prettier_options: --write --config ./.prettierrc ./src/**/*.{vue,js,json,css,html,mdx}
+                  only_changed: True
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    lint:
+        runs-on: ubuntu-latest
+        name: Lint
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+              with:
+                  ref: ${{ github.head_ref }}
+
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: "14"
+
+            - name: Install dependencies
+              uses: bahmutov/npm-install@v1
+
+            - name: Lint code
+              run: npm run ci:lint
+
+    test:
+        runs-on: ubuntu-latest
+        name: Test
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+              with:
+                  ref: ${{ github.head_ref }}
+
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: "14"
+
+            - name: Install dependencies
+              uses: bahmutov/npm-install@v1
+
+            - name: Test code
+              run: npm run ci:test

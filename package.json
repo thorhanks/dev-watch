@@ -5,12 +5,16 @@
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build --modern ./src/main.js",
-        "lint": "vue-cli-service lint",
+        "lint": "vue-cli-service lint --fix",
         "test": "vue-cli-service test:unit",
         "test:watch": "vue-cli-service test:unit --watch",
         "test:update-snapshots": "npm run test:unit -- -u",
         "storybook:build": "vue-cli-service storybook:build -c .storybook",
-        "storybook:serve": "vue-cli-service storybook:serve -p 4242 -c .storybook"
+        "storybook:serve": "vue-cli-service storybook:serve -p 4242 -c .storybook",
+        "ci:lint": "vue-cli-service lint",
+        "ci:test": "vue-cli-service test:unit",
+        "ci:format": "prettier --check --config ./.prettierrc ./src/**/*.{vue,js,json,css,html,mdx}",
+        "ci:storybook:build": "vue-cli-service storybook:build -c .storybook -o ./docs/storybook"
     },
     "dependencies": {
         "vue": "^2.6.11",
