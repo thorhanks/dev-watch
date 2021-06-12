@@ -2,36 +2,5 @@
 
 Browser extension that combines info from Jira, Github, and google calendar to give developers a quick overview of everything they have going on.
 
-## Project setup
-
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Run your unit tests
-
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
+-   [View Storybook](https://thorhanks.github.io/heimdall/storybook/)
+-   [View Test Coverage](https://thorhanks.github.io/heimdall/coverage/index.html)
