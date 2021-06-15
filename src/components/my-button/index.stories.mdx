@@ -14,7 +14,7 @@ This is a simple button with some text in it.
     <Story name="With Text">
         {{
             components: { MyButton },
-            template: '<my-button @click="action">Hello Button</my-button>',
+            template: `<my-button @click="action">{{$t('hello')}}Hello Button</my-button>`,
             methods: { action: action("clicked") },
         }}
     </Story>
