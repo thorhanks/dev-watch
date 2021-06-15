@@ -40,6 +40,12 @@ object-assign
  * Released under the MIT License.
  */
 
+/*!
+ * vue-i18n v8.24.4 
+ * (c) 2021 kazuya kawaguchi
+ * Released under the MIT License.
+ */
+
 /*! *****************************************************************************
   Copyright (c) Microsoft Corporation.
 
