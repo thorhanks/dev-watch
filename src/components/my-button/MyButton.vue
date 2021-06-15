@@ -2,6 +2,7 @@
     <button class="button is-primary mt-10" @click="onClick">
         <!-- @slot default inner button content -->
         hello world
+        <i class="fas fa-camera"></i>
         <slot></slot>
     </button>
 </template>
