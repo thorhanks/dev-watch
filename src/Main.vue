@@ -2,6 +2,7 @@
     <div id="app" class="">
         <img alt="Vue logo" class="mx-auto" src="./assets/logo.png" />
         <HelloWorld :msg="$t('hello')" />
+        <i class="fal fa-user" />
     </div>
 </template>
 

@@ -1,0 +1,9 @@
+{
+    "name": "DevWatch",
+    "description": "One stop shop for work info from GitHub/Jira/Zoom",
+    "version": "0.1",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "index.html"
+    }
+}

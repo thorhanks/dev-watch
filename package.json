@@ -14,7 +14,8 @@
         "ci:lint": "vue-cli-service lint",
         "ci:test": "vue-cli-service test:unit",
         "ci:format": "prettier --check --config ./.prettierrc ./src/**/*.{vue,js,json,css,html,mdx}",
-        "ci:storybook:build": "vue-cli-service storybook:build -c .storybook -o ./docs/storybook"
+        "ci:storybook:build": "vue-cli-service storybook:build -c .storybook -o ./docs/storybook",
+        "ci:prepare-release": "node prepare-release.js"
     },
     "dependencies": {
         "vue": "^2.6.11",
@@ -36,6 +37,7 @@
         "eslint-plugin-prettier": "^3.3.1",
         "eslint-plugin-vue": "^6.2.2",
         "faker": "^5.5.3",
+        "fs-extra": "^10.0.0",
         "miragejs": "^0.1.41",
         "postcss": "^7.0.36",
         "prettier": "^2.2.1",

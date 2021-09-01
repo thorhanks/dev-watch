@@ -1,5 +1,7 @@
 import "./assets/reset.css";
 import "./main.css";
+import "./assets/fontawesome-pro-5.15.3-web/css/fontawesome.css";
+import "./assets/fontawesome-pro-5.15.3-web/css/light.css";
 import Vue from "vue";
 import i18n from "./lang";
 import Main from "./Main.vue";
